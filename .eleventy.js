@@ -37,6 +37,8 @@ export default function (config) {
     },
   });
 
+  config.addWatchTarget("./src/scss/");
+
   return {
     pathPrefix: "/room/",
     markdownTemplateEngine: "njk",
