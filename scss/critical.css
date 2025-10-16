@@ -123,7 +123,7 @@ select {
 
 .navbar {
   position: relative;
-  background-color: var(--black);
+  background-color: transparent;
   color: var(--white);
   display: flex;
   align-items: center;
@@ -149,6 +149,36 @@ select {
   color: var(--black);
   background-color: var(--white);
 }
+.navbar:has(.main-nav.visible) .nav-toggle .close {
+  visibility: visible;
+  height: auto;
+  position: static;
+}
+.navbar:has(.main-nav.visible) .nav-toggle .hamburger {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+}
+.navbar .nav__list {
+  display: flex;
+  gap: var(--spacing-400);
+}
+.navbar .nav__item {
+  position: relative;
+}
+.navbar .nav__item:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -0.375rem;
+  left: calc(50% - 0.5rem);
+  width: 1rem;
+  height: 2px;
+  border-bottom: 2px solid currentColor;
+}
+.navbar .nav__item a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .nav-toggle {
   position: absolute;
@@ -168,7 +198,7 @@ select {
   position: absolute;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 64rem) {
   .navbar {
     justify-content: flex-start;
     gap: var(--spacing-700);
@@ -177,27 +207,6 @@ select {
     visibility: visible;
     height: auto;
     position: static;
-  }
-  .navbar .nav__list {
-    display: flex;
-    gap: var(--spacing-400);
-  }
-  .navbar .nav__item {
-    position: relative;
-    padding: 0.375rem 0;
-  }
-  .navbar .nav__item:hover::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: calc(50% - 0.5rem);
-    width: 1rem;
-    height: 2px;
-    border-bottom: 2px solid var(--white);
-  }
-  .navbar .nav__item a {
-    text-decoration: none;
-    color: inherit;
   }
   .nav-toggle {
     visibility: hidden;
@@ -213,8 +222,6 @@ select {
   --grey-100: hsl(0%, 0%, 94%);
   --grey-50: hsl(0%, 0%, 98%);
   --black: hsl(0, 0%, 0%);
-  --container-max-width: 70rem;
-  --container-width: 90%;
   --spacing-0: 0;
   --spacing-200: 1rem;
   --spacing-300: 1.5rem;
@@ -228,18 +235,9 @@ body {
   font-family: "League Spartan", sans-serif;
   font-size: 1rem;
   line-height: 1.6em;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: var(--container-max-width);
-  width: var(--container-width);
+  background-color: var(--black);
 }
 
 header {
   position: relative;
-}
-
-footer {
-  text-align: center;
 }
