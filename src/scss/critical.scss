@@ -14,10 +14,6 @@
   --grey-50: hsl(0%, 0%, 98%);
   --black: hsl(0, 0%, 0%);
 
-  // CONTAINER
-  --container-max-width: 70rem;
-  --container-width: 90%;
-
   // SPACING
   --spacing-0: 0;
   --spacing-200: 1rem;
@@ -32,18 +28,9 @@ body {
   font-family: "League Spartan", sans-serif;
   font-size: 1rem;
   line-height: 1.6em;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: var(--container-max-width);
-  width: var(--container-width);
+  background-color: var(--black);
 }
 
 header {
   position: relative;
-}
-
-footer {
-  text-align: center;
 }
