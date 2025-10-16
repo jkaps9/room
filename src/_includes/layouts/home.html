@@ -3,25 +3,37 @@
   <section class="hero">
     <div class="hero__container">
       <div class="hero__image">
-        <picture>
-          <!-- Desktop (1240px and up) -->
-          <source
-            media="(min-width: 768px)"
-            srcset="./assets/images/desktop-image-hero-1.jpg"
-          />
+        {% for hero in site.heroes %}
 
-          <!-- Mobile (up to 767px) -->
-          <source
-            media="(max-width: 767px)"
-            srcset="./assets/images/mobile-image-hero-1.jpg"
-          />
+          {% if hero.id != 1 %}
+            {% set class="hidden" %}
+          {% else %}
+            {% set class="" %}
+          {% endif %}
 
-          <!-- Fallback image -->
-          <img
-            src="./assets/images/mobile-image-hero-1.jpg"
-            alt="white chairs by a table with a bonsai tree on it"
-          />
-        </picture>
+          <picture>
+            <!-- Desktop (1240px and up) -->
+            {% set imgPath = ["./assets/images/desktop-", hero.imgSlug] | join %}
+            <source
+              media="(min-width: 768px)"
+              srcset="{{ imgPath }}"
+            />
+            {% set imgPath = ["./assets/images/mobile-", hero.imgSlug] | join %}
+            <!-- Mobile (up to 767px) -->
+            <source
+              media="(max-width: 767px)"
+              srcset="{{ imgPath }}"
+            />
+
+            <!-- Fallback image -->
+            <img
+              class="{{ class }}"
+              data-slideId="{{ hero.id }}"
+              src="{{ imgPath }}"
+              alt="white chairs by a table with a bonsai tree on it"
+            />
+          </picture>
+        {% endfor %}
         <div class="hero__carousel-buttons">
           <button class="btn--carousel previous">
             {% include "svgs/icon-angle-left.svg" %}
@@ -33,14 +45,25 @@
       </div>
 
       <div class="hero__content">
-        <h1 class="hero__title">Discover innovative ways to decorate</h1>
-        <p class="hero__copy">
-          We provide unmatched quality, comfort, and style for property owners
-          across the country. Our experts combine form and function in bringing
-          your vision to life. Create a room in your own style with our
-          collection and make your property a reflection of you and what you
-          love.
-        </p>
+        {% for hero in site.heroes %}
+          {% if hero.id != 1 %}
+            {% set class="hidden" %}
+          {% else %}
+            {% set class="" %}
+          {% endif %}
+          <h1
+            class="hero__title {{ class }}"
+            data-slideId="{{ hero.id }}"
+          >
+            {{ hero.title }}
+          </h1>
+          <p
+            class="hero__copy {{ class }}"
+            data-slideId="{{ hero.id }}"
+          >
+            {{ hero.copy }}
+          </p>
+        {% endfor %}
         {% include "components/button-text.html" %}
       </div>
     </div>

@@ -83,6 +83,10 @@ main {
   .btn--text {
     width: 100%;
   }
+
+  & [data-slideId].hidden {
+    @include mixins.visually-hidden;
+  }
 }
 
 @media (min-width: 48rem) {
