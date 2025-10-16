@@ -1,17 +1,22 @@
 {
-  "name": "Eleventy Template",
+  "name": "Room",
   "navigation": [
     {
-      "text": "About",
+      "text": "home",
+      "url": "/"
+    },
+    {
+      "text": "shop",
+      "url": "/shop/"
+    },
+    {
+      "text": "about",
       "url": "/about/"
     },
+
     {
-      "text": "Service",
-      "url": "/service/"
-    },
-    {
-      "text": "Projects",
-      "url": "/projects/"
+      "text": "contact",
+      "url": "/contact/"
     }
   ]
 }
