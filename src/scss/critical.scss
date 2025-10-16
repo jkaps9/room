@@ -29,10 +29,17 @@ body {
   font-size: 1rem;
   line-height: 1.6em;
   background-color: var(--white);
+  color: var(--black);
+}
+
+p {
+  color: var(--grey-500);
 }
 
 main {
   position: relative;
+  max-width: 90rem;
+  margin: 0 auto;
 }
 
 .hero {
@@ -42,16 +49,55 @@ main {
     gap: var(--spacing-800);
   }
 
+  &__image {
+    max-width: 52.5rem;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
   &__content {
     width: 83vw;
     margin: 0 auto;
   }
 
   &__title {
+    @include mixins.text-preset-1;
     margin-bottom: var(--spacing-200);
   }
 
   &__copy {
+    @include mixins.text-preset-3-medium;
     margin-bottom: var(--spacing-400);
+  }
+
+  .btn--text {
+    width: 100%;
+  }
+}
+
+@media (min-width: 48rem) {
+  .hero {
+    .btn--text {
+      width: auto;
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  .hero {
+    &__container {
+      display: grid;
+      gap: 0;
+      grid-template-columns: 58% 42%;
+    }
+
+    &__content {
+      margin: 0;
+      padding: 0 min(7vw, 100px);
+      place-content: center;
+      width: auto;
+    }
   }
 }

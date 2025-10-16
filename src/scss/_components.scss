@@ -109,6 +109,7 @@
 
 @media (min-width: 64rem) {
   .navbar {
+    left: var(--spacing-800);
     justify-content: flex-start;
     gap: var(--spacing-700);
     .main-nav {
