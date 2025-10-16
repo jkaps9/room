@@ -25,7 +25,7 @@
 }
 
 @mixin text-preset-3-bold {
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 0.7557rem + 0.5089vw, 1rem);
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: 7px;

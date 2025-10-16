@@ -89,10 +89,43 @@ main {
   }
 }
 
+.about {
+  margin-top: var(--spacing-800);
+  &__content {
+    width: 83vw;
+    margin: var(--spacing-800) auto;
+  }
+
+  &__title {
+    @include mixins.text-preset-3-bold;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-200);
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      aspect-ratio: 1.5;
+    }
+  }
+
+  &__copy {
+    @include mixins.text-preset-3-medium;
+  }
+}
+
 @media (min-width: 48rem) {
   .hero {
     .btn--text {
       width: auto;
+    }
+  }
+  .about {
+    &__image {
+      img {
+        aspect-ratio: 2.56;
+        object-fit: cover;
+      }
     }
   }
 }
@@ -110,6 +143,26 @@ main {
       padding: 0 min(7vw, 100px);
       place-content: center;
       width: auto;
+    }
+  }
+
+  .about {
+    margin-top: 0;
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 40% 1fr;
+    }
+
+    &__content {
+      width: auto;
+      margin: 0 var(--spacing-600);
+      place-content: center;
+    }
+
+    &__image {
+      img {
+        aspect-ratio: 1.6;
+      }
     }
   }
 }
