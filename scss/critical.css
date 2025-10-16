@@ -140,6 +140,15 @@ select {
   height: 0;
   position: absolute;
 }
+.navbar .main-nav.visible {
+  visibility: visible;
+  height: auto;
+  position: static;
+}
+.navbar:has(.main-nav.visible) {
+  color: var(--black);
+  background-color: var(--white);
+}
 
 .nav-toggle {
   position: absolute;
@@ -188,7 +197,7 @@ select {
   }
   .navbar .nav__item a {
     text-decoration: none;
-    color: var(--white);
+    color: inherit;
   }
   .nav-toggle {
     visibility: hidden;
