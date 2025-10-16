@@ -1,17 +1,27 @@
 @use "mixins";
 
 .btn--text {
-  display: inline-block;
-  padding: 1em 2em;
-  text-decoration: none;
-  background-color: var(--accent-color);
-  color: var(--text-white);
-  font-size: 1rem;
-  font-weight: 700;
+  @include mixins.text-preset-4;
+  align-items: center;
+  background-color: transparent;
+  color: inherit;
   cursor: pointer;
+  display: inline-flex;
+  gap: var(--spacing-400);
+  justify-content: space-between;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+
+  svg path {
+    transition: fill 0.3s ease;
+  }
 
   &:hover {
-    background-color: var(--accent-color-light);
+    color: var(--grey-500);
+    svg path {
+      fill: var(--grey-500);
+    }
   }
 }
 

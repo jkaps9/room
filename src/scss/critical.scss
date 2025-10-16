@@ -34,3 +34,24 @@ body {
 main {
   position: relative;
 }
+
+.hero {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-800);
+  }
+
+  &__content {
+    width: 83vw;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin-bottom: var(--spacing-200);
+  }
+
+  &__copy {
+    margin-bottom: var(--spacing-400);
+  }
+}
