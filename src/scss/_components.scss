@@ -26,6 +26,14 @@
 }
 
 .btn--carousel {
+  background-color: var(--black);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 5rem;
+  height: 5rem;
+  appearance: none;
 }
 
 .navbar {
@@ -39,6 +47,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1000;
 
   .logo {
     display: block;

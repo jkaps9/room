@@ -22,7 +22,14 @@
             alt="white chairs by a table with a bonsai tree on it"
           />
         </picture>
-        {% include "components/button-carousel.html" %}
+        <div class="hero__carousel-buttons">
+          <button class="btn--carousel previous">
+            {% include "svgs/icon-angle-left.svg" %}
+          </button>
+          <button class="btn--carousel next">
+            {% include "svgs/icon-angle-right.svg" %}
+          </button>
+        </div>
       </div>
 
       <div class="hero__content">

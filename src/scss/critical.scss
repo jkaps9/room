@@ -51,10 +51,16 @@ main {
 
   &__image {
     max-width: 52.5rem;
+    position: relative;
     img {
       width: 100%;
       object-fit: cover;
     }
+  }
+
+  &__carousel-buttons {
+    position: absolute;
+    display: flex;
   }
 
   &__content {
