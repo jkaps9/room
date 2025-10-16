@@ -26,14 +26,19 @@
 }
 
 .btn--carousel {
-  background-color: var(--black);
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  background-color: var(--black);
   border: none;
-  width: clamp(3.5rem, 2.0687rem + 6.1069vw, 5rem);
+  cursor: pointer;
+  display: inline-flex;
   height: clamp(3.5rem, 2.0687rem + 6.1069vw, 5rem);
-  appearance: none;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  width: clamp(3.5rem, 2.0687rem + 6.1069vw, 5rem);
+
+  &:hover {
+    background-color: var(--grey-800);
+  }
 }
 
 .navbar {
