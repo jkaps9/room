@@ -180,9 +180,13 @@ select {
   gap: var(--spacing-400);
 }
 .navbar .nav__item {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.7px;
   position: relative;
 }
-.navbar .nav__item:hover::after {
+.navbar .nav__item::after {
   content: "";
   position: absolute;
   bottom: -0.375rem;
@@ -190,6 +194,11 @@ select {
   width: 1rem;
   height: 2px;
   border-bottom: 2px solid currentColor;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+.navbar .nav__item:hover::after {
+  transform: scale(1);
 }
 .navbar .nav__item a {
   text-decoration: none;
