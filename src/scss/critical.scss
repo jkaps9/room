@@ -1,6 +1,6 @@
 @use "fonts";
 @use "reset";
-@use "text";
+@use "mixins";
 @use "sass:map";
 
 :root {
@@ -13,16 +13,18 @@
   --grey-50: hsl(0%, 0%, 98%);
   --black: hsl(0, 0%, 0%);
 
-  --accent-color: hsl(240, 100%, 50%);
-  --accent-color-light: hsl(240, 100%, 65%);
-  --text-white: #fff;
-  --text-black: #000;
-
-  --bg-black: #1a1a1a;
-
   // CONTAINER
   --container-max-width: 70rem;
   --container-width: 90%;
+
+  // SPACING
+  --spacing-0: 0;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-600: 3rem;
+  --spacing-700: 3.5rem;
+  --spacing-800: 4rem;
 }
 
 body {
