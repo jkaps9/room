@@ -133,6 +133,17 @@ select {
   fill: var(--grey-500);
 }
 
+.btn--carousel {
+  background-color: var(--black);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: clamp(3.5rem, 2.0687rem + 6.1069vw, 5rem);
+  height: clamp(3.5rem, 2.0687rem + 6.1069vw, 5rem);
+  appearance: none;
+}
+
 .navbar {
   position: absolute;
   top: 0;
@@ -144,6 +155,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1000;
 }
 .navbar .logo {
   display: block;
@@ -282,10 +294,17 @@ main {
 }
 .hero__image {
   max-width: 52.5rem;
+  position: relative;
 }
 .hero__image img {
   width: 100%;
   object-fit: cover;
+}
+.hero__carousel-buttons {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
 }
 .hero__content {
   width: 83vw;
