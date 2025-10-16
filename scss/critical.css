@@ -216,6 +216,7 @@ select {
 
 @media (min-width: 64rem) {
   .navbar {
+    left: var(--spacing-800);
     justify-content: flex-start;
     gap: var(--spacing-700);
   }
@@ -252,10 +253,17 @@ body {
   font-size: 1rem;
   line-height: 1.6em;
   background-color: var(--white);
+  color: var(--black);
+}
+
+p {
+  color: var(--grey-500);
 }
 
 main {
   position: relative;
+  max-width: 90rem;
+  margin: 0 auto;
 }
 
 .hero__container {
@@ -263,13 +271,50 @@ main {
   flex-direction: column;
   gap: var(--spacing-800);
 }
+.hero__image {
+  max-width: 52.5rem;
+}
+.hero__image img {
+  width: 100%;
+  object-fit: cover;
+}
 .hero__content {
   width: 83vw;
   margin: 0 auto;
 }
 .hero__title {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -2px;
   margin-bottom: var(--spacing-200);
 }
 .hero__copy {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
   margin-bottom: var(--spacing-400);
+}
+.hero .btn--text {
+  width: 100%;
+}
+
+@media (min-width: 48rem) {
+  .hero .btn--text {
+    width: auto;
+  }
+}
+@media (min-width: 64rem) {
+  .hero__container {
+    display: grid;
+    gap: 0;
+    grid-template-columns: 58% 42%;
+  }
+  .hero__content {
+    margin: 0;
+    padding: 0 min(7vw, 100px);
+    place-content: center;
+    width: auto;
+  }
 }
