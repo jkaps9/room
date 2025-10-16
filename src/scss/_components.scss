@@ -34,9 +34,17 @@
     align-items: center;
     justify-content: center;
   }
-
   .main-nav {
     @include mixins.visually-hidden;
+
+    &.visible {
+      @include mixins.visually-visible;
+    }
+  }
+
+  &:has(.main-nav.visible) {
+    color: var(--black);
+    background-color: var(--white);
   }
 }
 
@@ -84,7 +92,7 @@
       }
       a {
         text-decoration: none;
-        color: var(--white);
+        color: inherit;
       }
     }
   }
