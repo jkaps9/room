@@ -108,17 +108,29 @@ select {
   }
 }
 .btn--text {
-  display: inline-block;
-  padding: 1em 2em;
-  text-decoration: none;
-  background-color: var(--accent-color);
-  color: var(--text-white);
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 12.5px;
+  align-items: center;
+  background-color: transparent;
+  color: inherit;
   cursor: pointer;
+  display: inline-flex;
+  gap: var(--spacing-400);
+  justify-content: space-between;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+.btn--text svg path {
+  transition: fill 0.3s ease;
 }
 .btn--text:hover {
-  background-color: var(--accent-color-light);
+  color: var(--grey-500);
+}
+.btn--text:hover svg path {
+  fill: var(--grey-500);
 }
 
 .navbar {
@@ -244,4 +256,20 @@ body {
 
 main {
   position: relative;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-800);
+}
+.hero__content {
+  width: 83vw;
+  margin: 0 auto;
+}
+.hero__title {
+  margin-bottom: var(--spacing-200);
+}
+.hero__copy {
+  margin-bottom: var(--spacing-400);
 }
