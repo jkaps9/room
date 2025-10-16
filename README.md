@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/jkaps9/creative](https://github.com/jkaps9/creative)
-- Live Site URL: [https://jkaps9.github.io/creative/](https://jkaps9.github.io/creative/)
+- Solution URL: [https://github.com/jkaps9/room](https://github.com/jkaps9/room)
+- Live Site URL: [https://jkaps9.github.io/room/](https://jkaps9.github.io/room/)
 
 ## My process
 
