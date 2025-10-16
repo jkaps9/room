@@ -109,3 +109,11 @@ main {
     }
   }
 }
+
+@media (min-width: 84rem) {
+  .hero {
+    &__carousel-buttons {
+      right: -10rem;
+    }
+  }
+}
